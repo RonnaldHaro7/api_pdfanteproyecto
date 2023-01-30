@@ -1,4 +1,4 @@
-package uic.api_anteproyecto.generarsolicitudpdf;
+package uic.api_pdfanteproyecto.generaranteproyectopdf;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,27 +18,27 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RestController
 @RequestMapping("api/solicitud")
 @CrossOrigin({"*"})
-public class SolicitudController {
-    @Autowired SolicitudService solicitudService;
+public class AnteproyectoController {
+    @Autowired AnteproyectoService solicitudService;
 
     @Operation(summary = "Obtiene todos los productos registrados en este microservicio")
     @GetMapping("/")
-    public List<Solicitud> findAll(){
+    public List<Anteproyecto> findAll(){
         return solicitudService.findAll();
     }
 
     @GetMapping("/{id}/")
-    public Solicitud findById(@PathVariable Long id){
+    public Anteproyecto findById(@PathVariable Long id){
         return solicitudService.findById(id);
     }
 
     @PostMapping("/")
-    public Solicitud save(@RequestBody Solicitud entity){
+    public Anteproyecto save(@RequestBody Anteproyecto entity){
         return solicitudService.save(entity);
     }
 
     @PutMapping("/{id}/")
-    public Solicitud update(@RequestBody Solicitud entity){
+    public Anteproyecto update(@RequestBody Anteproyecto entity){
         return solicitudService.save(entity);
     }
 

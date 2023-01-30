@@ -1,4 +1,4 @@
-package uic.api_anteproyecto.estudiante;
+package uic.api_pdfanteproyecto.estudiante;
 
 import lombok.Data;
 

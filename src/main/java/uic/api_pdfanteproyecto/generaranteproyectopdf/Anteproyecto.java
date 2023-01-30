@@ -1,4 +1,4 @@
-package uic.api_anteproyecto.generarsolicitudpdf;
+package uic.api_pdfanteproyecto.generaranteproyectopdf;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 @Entity
-class Solicitud {
+class Anteproyecto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

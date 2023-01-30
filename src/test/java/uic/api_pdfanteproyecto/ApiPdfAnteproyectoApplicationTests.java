@@ -1,10 +1,10 @@
-package uic.api_anteproyecto;
+package uic.api_pdfanteproyecto;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiAnteproyectoApplicationTests {
+class ApiPdfAnteproyectoApplicationTests {
 
 	@Test
 	void contextLoads() {

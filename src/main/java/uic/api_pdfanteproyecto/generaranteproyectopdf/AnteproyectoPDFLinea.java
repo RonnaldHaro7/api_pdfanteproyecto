@@ -1,4 +1,4 @@
-package uic.api_anteproyecto.generarsolicitudpdf;
+package uic.api_pdfanteproyecto.generaranteproyectopdf;
 
 import java.util.Date;
 import jakarta.persistence.Entity;
@@ -11,14 +11,14 @@ import lombok.Data;
 
 @Data
 @Entity
-class SolicitudPDFLinea {
+class AnteproyectoPDFLinea {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    private SolicitudPDF solicitudpdf;
+    private AnteproyectoPDF solicitudpdf;
 
     private String nombre_profesor;
     private String periodo_lectivo;

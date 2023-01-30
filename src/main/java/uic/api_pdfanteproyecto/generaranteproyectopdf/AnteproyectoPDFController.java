@@ -1,4 +1,4 @@
-package uic.api_anteproyecto.generarsolicitudpdf;
+package uic.api_pdfanteproyecto.generaranteproyectopdf;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,27 +27,27 @@ import java.util.List;
 @RestController
 @RequestMapping("api/solicitudpdf")
 @CrossOrigin({"*"})
-public class SolicitudPDFController {
-    @Autowired SolicitudPDFService solicitudPDFService;
+public class AnteproyectoPDFController {
+    @Autowired AnteproyectoPDFService solicitudPDFService;
 
     @Operation(summary = "Obtiene todas las solicitudes pdf")
     @GetMapping("/")
-    public List<SolicitudPDF> findAll(){
+    public List<AnteproyectoPDF> findAll(){
         return solicitudPDFService.findAll();
     }
 
     @GetMapping("/{id}/")
-    public SolicitudPDF findById(@PathVariable Long id){
+    public AnteproyectoPDF findById(@PathVariable Long id){
         return solicitudPDFService.findById(id);
     }
 
     @PostMapping("/")
-    public SolicitudPDF save(@RequestBody SolicitudPDF entity){
+    public AnteproyectoPDF save(@RequestBody AnteproyectoPDF entity){
         return solicitudPDFService.save(entity);
     }
 
     @PutMapping("/{id}/")
-    public SolicitudPDF update(@RequestBody SolicitudPDF entity){
+    public AnteproyectoPDF update(@RequestBody AnteproyectoPDF entity){
         return solicitudPDFService.save(entity);
     }
 

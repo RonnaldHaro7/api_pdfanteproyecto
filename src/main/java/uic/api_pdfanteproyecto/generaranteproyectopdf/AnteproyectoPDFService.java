@@ -1,4 +1,4 @@
-package uic.api_anteproyecto.generarsolicitudpdf;
+package uic.api_pdfanteproyecto.generaranteproyectopdf;
 
 import java.io.FileNotFoundException;
 import java.sql.Date;
@@ -9,44 +9,43 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
-import uic.api_anteproyecto.estudiante.CustomerEstudient;
-import uic.api_anteproyecto.estudiante.CustomerDTO;
 import jakarta.transaction.Transactional;
 import net.sf.jasperreports.engine.JREmptyDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
+import uic.api_pdfanteproyecto.estudiante.CustomerDTO;
+import uic.api_pdfanteproyecto.estudiante.CustomerEstudient;
 
 
 @Transactional
 @Service
-public class SolicitudPDFService {
-    @Autowired SolicitudPDFRepository solicitudPDFRepository;
+public class AnteproyectoPDFService {
+    @Autowired AnteproyectoPDFRepository solicitudPDFRepository;
     @Autowired CustomerEstudient customerEstudient;
-    @Autowired CustomerEstudient customerSolicitud;
 
     @Transactional
-    public SolicitudPDF save(SolicitudPDF entity){
+    public AnteproyectoPDF save(AnteproyectoPDF entity){
         return solicitudPDFRepository.save(entity);
     }
 
-    public SolicitudPDF findById( Long id){
-        return solicitudPDFRepository.findById(id).orElse(new SolicitudPDF());
+    public AnteproyectoPDF findById( Long id){
+        return solicitudPDFRepository.findById(id).orElse(new AnteproyectoPDF());
     }
 
     public void deleteById(Long id){
         solicitudPDFRepository.deleteById(id);
     }
 
-    public List<SolicitudPDF> findAll(){
+    public List<AnteproyectoPDF> findAll(){
         return solicitudPDFRepository.findAll();
     }
 
     public JasperPrint getSolicitudPDFReporte(Long id) {
 
         Map<String, Object> reportParameters = new HashMap<String, Object>();
-        SolicitudPDF solicitudPDF = findById(id);
+        AnteproyectoPDF solicitudPDF = findById(id);
         if (solicitudPDF.getId()==null)
             return null;
         

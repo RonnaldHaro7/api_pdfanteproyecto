@@ -1,4 +1,4 @@
-package uic.api_anteproyecto.generarsolicitudpdf;
+package uic.api_pdfanteproyecto.generaranteproyectopdf;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import lombok.Data;
 
 @Data
 @Entity
-class SolicitudPDF {
+class AnteproyectoPDF {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,5 +25,5 @@ class SolicitudPDF {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "pdf_id")
-    private List<SolicitudPDFLinea> lineas = new ArrayList<>();
+    private List<AnteproyectoPDFLinea> lineas = new ArrayList<>();
 }
