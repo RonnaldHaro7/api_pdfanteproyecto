@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e7889926-718a-4a0c-b637-ba2dcd7affa7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="fecha" class="java.sql.Date"/>
+	<parameter name="tema" class="java.lang.String"/>
+	<parameter name="profesor" class="java.lang.String"/>
+	<parameter name="periodo_lectivo" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="nro_identificacion" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="cellphone" class="java.lang.String"/>
+	<parameter name="carrer" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="398" splitType="Stretch">
+			<image onErrorType="Icon">
+				<reportElement x="20" y="0" width="80" height="79" uuid="f4948d0d-5bb2-4024-9acf-879b6390526c"/>
+				<imageExpression><![CDATA["classpath:jrxml/logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="380" y="70" width="100" height="30" uuid="a960ab00-be06-4a03-8143-85dccf1b222e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Quito D.M.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="90" width="100" height="30" uuid="29bdec07-b683-471c-a052-7b81f5a69725"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Msc.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="130" width="260" height="30" uuid="3616b096-152c-4ca2-8dd1-528ddf1267b4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COORDINADOR DE LA CARRERA  DE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="150" width="100" height="30" uuid="ef0ba9b2-fe19-474b-839c-d845e172ff0e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Presente.-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="180" width="516" height="40" uuid="454e5390-3c06-443c-9d5a-96bcaada364f"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Después de expresarle un caluroso saludo y éxitos en sus funciones, me permito remitirle la
+siguiente Solicitud:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="220" width="100" height="30" uuid="6de4e72b-01f5-4917-bc2e-e3b17e428664"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Yo,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="220" width="53" height="30" uuid="3e2a940b-2791-4b41-a286-23aba67c0218"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[, con CC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="220" width="156" height="20" uuid="6964364e-d236-4c77-9d05-6d527b6dbcef"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[estudiante de la carrera de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="240" width="236" height="20" uuid="1197b5a5-d9a8-409e-ad26-dee94ecda691"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[y quien culminó sus estudios en el ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="260" width="100" height="30" uuid="0f673fca-fc60-46f8-8fb5-6bf92040c25d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[período lectivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="260" width="326" height="20" uuid="78ca173d-bacc-4d95-abc6-613726b28203"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[solicito poner en consideración la aprobación del tema ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="280" width="50" height="30" uuid="50562de4-3d7c-4832-b59e-ebe8db26b66a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[titulado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="280" width="266" height="17" uuid="a8127c71-0633-4bc2-b491-c586271fcafe"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[mismo que se encuentra dentro de las líneas de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="300" width="202" height="30" uuid="365f3fe4-ea7d-45db-b76b-0dd717c40b52"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[investigación de la carrera.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="320" width="175" height="30" uuid="5cf85d9a-41cb-44a7-b341-25d81424ff0b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nota: Adjunto anteproyecto.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="340" width="516" height="40" uuid="beca90cf-dff7-4a64-8225-d71f32a6bd92"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Por la favorable atención que se digne dar al presente, le anticipo mis sentidos
+agradecimientos.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="449" y="70" width="100" height="30" uuid="f7961ac2-a778-49f5-bac9-763a6019d4de"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="110" width="120" height="20" uuid="9a73e528-3040-475d-b153-f74a2913dae0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{profesor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="280" width="200" height="17" uuid="a2427bb9-d7d0-4eb0-95f6-7e6a684f2d36"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tema}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="260" width="110" height="20" uuid="527742d2-46d8-4076-a46f-f0c550fd9f01"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{periodo_lectivo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="220" width="220" height="30" uuid="e5483928-9da7-4880-b6e0-8f5101fec97c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="313" y="220" width="67" height="20" uuid="438158e5-aafc-4404-b3ae-776ae404b673"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nro_identificacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="240" width="300" height="20" uuid="b5566658-d3a6-4ac8-bfbc-9a1e0f9c6058"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{carrer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="130" width="290" height="30" uuid="3b737704-10d4-4b35-8e4a-9f7ea9751b15"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{carrer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="200" splitType="Stretch">
+			<staticText>
+				<reportElement x="240" y="13" width="80" height="30" uuid="af87fc2d-4f87-47b0-8896-47f2efdcc133"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Atentamente,]]></text>
+			</staticText>
+			<line>
+				<reportElement x="190" y="102" width="171" height="1" uuid="65f76e86-5140-4396-a144-d34ed1a0ba58"/>
+			</line>
+			<textField>
+				<reportElement x="230" y="110" width="100" height="30" uuid="7ee46e56-cb77-46a1-aa7c-30a70a771c6f"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="130" width="152" height="30" uuid="09eeef1b-32f1-41ab-b809-44bdefe7bc58"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nro_identificacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="150" width="100" height="30" uuid="bc5abd1f-567e-4a39-9943-2a028986566f"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="170" width="100" height="30" uuid="cc30f0fa-3f1c-4833-ae0d-bbc04d555791"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cellphone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>
