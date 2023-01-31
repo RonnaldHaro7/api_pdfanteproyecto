@@ -14,36 +14,36 @@ import java.util.List;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-@Tag(name = "Controlador de la solicitud")
+@Tag(name = "Controlador del anteproyecto")
 @RestController
-@RequestMapping("api/solicitud")
+@RequestMapping("api/anteproyecto")
 @CrossOrigin({"*"})
 public class AnteproyectoController {
-    @Autowired AnteproyectoService solicitudService;
+    @Autowired AnteproyectoService anteproyectoService;
 
-    @Operation(summary = "Obtiene todos los productos registrados en este microservicio")
+    @Operation(summary = "Obtiene todos los anteproyectos registrados en este microservicio")
     @GetMapping("/")
     public List<Anteproyecto> findAll(){
-        return solicitudService.findAll();
+        return anteproyectoService.findAll();
     }
 
     @GetMapping("/{id}/")
     public Anteproyecto findById(@PathVariable Long id){
-        return solicitudService.findById(id);
+        return anteproyectoService.findById(id);
     }
 
     @PostMapping("/")
     public Anteproyecto save(@RequestBody Anteproyecto entity){
-        return solicitudService.save(entity);
+        return anteproyectoService.save(entity);
     }
 
     @PutMapping("/{id}/")
     public Anteproyecto update(@RequestBody Anteproyecto entity){
-        return solicitudService.save(entity);
+        return anteproyectoService.save(entity);
     }
 
     @DeleteMapping("/{id}/")
     public void deleteById(@PathVariable Long id){
-        solicitudService.deleteById(id);
+        anteproyectoService.deleteById(id);
     }
 }

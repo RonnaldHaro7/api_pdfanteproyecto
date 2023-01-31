@@ -23,43 +23,43 @@ import net.sf.jasperreports.engine.JasperPrint;
 
 import java.util.List;
 
-@Tag(name = "Controlador de la solicitudpdf")
+@Tag(name = "Controlador del anteproyecto")
 @RestController
-@RequestMapping("api/solicitudpdf")
+@RequestMapping("api/anteproyectopdf")
 @CrossOrigin({"*"})
 public class AnteproyectoPDFController {
-    @Autowired AnteproyectoPDFService solicitudPDFService;
+    @Autowired AnteproyectoPDFService anteproyectoPDFService;
 
-    @Operation(summary = "Obtiene todas las solicitudes pdf")
+    @Operation(summary = "Obtiene todas los anteproyectos pdf")
     @GetMapping("/")
     public List<AnteproyectoPDF> findAll(){
-        return solicitudPDFService.findAll();
+        return anteproyectoPDFService.findAll();
     }
 
     @GetMapping("/{id}/")
     public AnteproyectoPDF findById(@PathVariable Long id){
-        return solicitudPDFService.findById(id);
+        return anteproyectoPDFService.findById(id);
     }
 
     @PostMapping("/")
     public AnteproyectoPDF save(@RequestBody AnteproyectoPDF entity){
-        return solicitudPDFService.save(entity);
+        return anteproyectoPDFService.save(entity);
     }
 
     @PutMapping("/{id}/")
     public AnteproyectoPDF update(@RequestBody AnteproyectoPDF entity){
-        return solicitudPDFService.save(entity);
+        return anteproyectoPDFService.save(entity);
     }
 
     @DeleteMapping("/{id}/")
     public void deleteById(@PathVariable Long id){
-        solicitudPDFService.deleteById(id);
+        anteproyectoPDFService.deleteById(id);
     }
 
     @GetMapping("/pdf/{id}/")
-	public ResponseEntity<byte[]> getSolicitudPDFReporte(@PathVariable long id) throws JRException {
+	public ResponseEntity<byte[]> getAnteproyectoPDFReporte(@PathVariable long id) throws JRException {
 
-		JasperPrint reporte = solicitudPDFService.getSolicitudPDFReporte(id);
+		JasperPrint reporte = anteproyectoPDFService.getAnteproyectoPDFReporte(id);
         
         if (reporte==null)
             return new ResponseEntity<byte[]>(null, null, HttpStatus.NOT_FOUND);
@@ -68,7 +68,7 @@ public class AnteproyectoPDFController {
 		HttpHeaders headers = new HttpHeaders();
 		// set the PDF format
 		headers.setContentType(MediaType.APPLICATION_PDF);
-		headers.setContentDispositionFormData("filename", "solicitudPDF.pdf");
+		headers.setContentDispositionFormData("filename", "anteproyectoPDF.pdf");
 		// create the report in PDF format
 		return new ResponseEntity<byte[]>(JasperExportManager.exportReportToPdf(reporte), headers, HttpStatus.OK);
 

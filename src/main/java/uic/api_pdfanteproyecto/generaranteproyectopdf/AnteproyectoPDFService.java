@@ -1,7 +1,6 @@
 package uic.api_pdfanteproyecto.generaranteproyectopdf;
 
 import java.io.FileNotFoundException;
-import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,44 +21,51 @@ import uic.api_pdfanteproyecto.estudiante.CustomerEstudient;
 @Transactional
 @Service
 public class AnteproyectoPDFService {
-    @Autowired AnteproyectoPDFRepository solicitudPDFRepository;
+    @Autowired AnteproyectoPDFRepository anteproyectoPDFRepository;
     @Autowired CustomerEstudient customerEstudient;
 
     @Transactional
     public AnteproyectoPDF save(AnteproyectoPDF entity){
-        return solicitudPDFRepository.save(entity);
+        return anteproyectoPDFRepository.save(entity);
     }
 
     public AnteproyectoPDF findById( Long id){
-        return solicitudPDFRepository.findById(id).orElse(new AnteproyectoPDF());
+        return anteproyectoPDFRepository.findById(id).orElse(new AnteproyectoPDF());
     }
 
     public void deleteById(Long id){
-        solicitudPDFRepository.deleteById(id);
+        anteproyectoPDFRepository.deleteById(id);
     }
 
     public List<AnteproyectoPDF> findAll(){
-        return solicitudPDFRepository.findAll();
+        return anteproyectoPDFRepository.findAll();
     }
 
-    public JasperPrint getSolicitudPDFReporte(Long id) {
+    public JasperPrint getAnteproyectoPDFReporte(Long id) {
 
         Map<String, Object> reportParameters = new HashMap<String, Object>();
-        AnteproyectoPDF solicitudPDF = findById(id);
-        if (solicitudPDF.getId()==null)
+        AnteproyectoPDF anteproyectoPDF = findById(id);
+        if (anteproyectoPDF.getId()==null)
             return null;
         
-        reportParameters.put("tema", solicitudPDF.getTema());
-        reportParameters.put("periodo_lectivo", solicitudPDF.getPeriodo_lectivo());
-        reportParameters.put("profesor", solicitudPDF.getProfesor());
-        reportParameters.put("fecha",Date.valueOf(solicitudPDF.getFecha()));
+        reportParameters.put("linea_investigacion", anteproyectoPDF.getLinea_investigacion());
+        reportParameters.put("tema", anteproyectoPDF.getTema());
+        reportParameters.put("titulo", anteproyectoPDF.getTitulo());
+        reportParameters.put("problema", anteproyectoPDF.getProblema());
+        reportParameters.put("fecha", anteproyectoPDF.getFecha());
+        reportParameters.put("objetivo_g", anteproyectoPDF.getObjetivo_g());
+        reportParameters.put("objetivo_s", anteproyectoPDF.getObjetivo_s());
+        reportParameters.put("justificacion", anteproyectoPDF.getJustificacion());
+        reportParameters.put("alcance", anteproyectoPDF.getAlcance());
+        reportParameters.put("m_teorico", anteproyectoPDF.getM_teorico());
+        reportParameters.put("m_metodologico", anteproyectoPDF.getM_metodologico());
+        reportParameters.put("metodologia", anteproyectoPDF.getMetodologia());
+        reportParameters.put("bibliografia", anteproyectoPDF.getBibliografia());
+        reportParameters.put("presupuesto", anteproyectoPDF.getPresupuesto());
         
-        CustomerDTO estudiante =  customerEstudient.findCustomerById(solicitudPDF.getEstudianteId());
+        CustomerDTO estudiante =  customerEstudient.findCustomerById(anteproyectoPDF.getEstudianteId());
         reportParameters.put("name", estudiante.getName());
-        reportParameters.put("nro_identificacion", estudiante.getNro_identificacion());
         reportParameters.put("career", estudiante.getCareer());
-        reportParameters.put("email", estudiante.getEmail());
-        reportParameters.put("cellphone", estudiante.getCellphone());
 
         JasperPrint reportJasperPrint = null;
         try {
