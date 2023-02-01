@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pdfanteproyecto" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f2a2c17-feac-44eb-a802-c76d9ab05c96">
+	<parameter name="tema" class="java.lang.String"/>
+	<parameter name="career" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="titulo" class="java.lang.String"/>
+	<parameter name="fecha" class="java.sql.Date"/>
+	<parameter name="linea_investigacion" class="java.lang.String"/>
+	<parameter name="problema" class="java.lang.String"/>
+	<parameter name="objetivo_g" class="java.lang.String"/>
+	<parameter name="objetivo_s" class="java.lang.String"/>
+	<parameter name="justificacion" class="java.lang.String"/>
+	<parameter name="alcance" class="java.lang.String"/>
+	<parameter name="m_teorico" class="java.lang.String"/>
+	<parameter name="m_metodologico" class="java.lang.String"/>
+	<parameter name="metodologia" class="java.lang.String"/>
+	<parameter name="bibliografia" class="java.lang.String"/>
+	<parameter name="presupuesto" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="87" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="0" width="150" height="80" uuid="3310fd89-63ab-47e7-a292-2c25ddf461de"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="450" y="0" width="90" height="81" uuid="73d13640-a3fa-47f3-99e7-203a84f5793b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="160" y="0" width="290" height="50" uuid="14070fb0-8a77-4be6-a3fa-0ae4789b1b37"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="160" y="50" width="290" height="31" uuid="998b25f6-6c8b-408c-8d05-cbace2faa816"/>
+			</rectangle>
+			<image onErrorType="Icon">
+				<reportElement x="20" y="10" width="90" height="59" uuid="88dd4cde-e81b-4028-8572-49a1ff320598"/>
+				<imageExpression><![CDATA["classpath:jrxml/logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="160" y="0" width="290" height="51" uuid="a37179cc-2a52-4de6-8264-cf3375de67af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[
+Instituto Superior Tecnológico de Turismo y Patrimonio "Yavirac" ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="50" width="290" height="31" uuid="ba326ed8-3bbe-4500-873d-b1c8a33095b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tema}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="0" width="90" height="81" uuid="24d9c6e1-9964-418b-ba63-640a578b9a51"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Versión 
+1.0]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="639" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="110" width="530" height="90" uuid="083eb7c4-02ad-4d5c-a8dc-a87a7292c021"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="22" y="120" width="110" height="20" uuid="620d285b-9945-49ae-902b-8a8b1e341f93"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tema:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="22" y="140" width="510" height="50" uuid="bd3f31ba-17a0-4d00-a3cf-93dc8cf2b194"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{titulo}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="10" y="200" width="530" height="100" uuid="a0d775d0-2bff-474e-8b68-e73b3d850e3e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="22" y="210" width="270" height="20" uuid="19a90191-9acc-408b-aed7-159468b29836"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Línea de Investigación institucional:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="22" y="230" width="510" height="60" uuid="87aafd90-59ac-4e45-880f-4e7be2b8377f"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{linea_investigacion}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="10" y="300" width="530" height="90" uuid="bd48142c-ba4d-45fa-89cb-a6a552d467aa"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="22" y="310" width="270" height="20" uuid="5dec774b-d5cc-4a2d-af3c-6828bbb2c730"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Problema de investigación:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="22" y="330" width="510" height="60" uuid="af35d347-ba78-4227-8bd6-98eda6feafb8"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{problema}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="10" y="400" width="530" height="229" uuid="7da3c9ca-b3de-478c-ae56-80e3d8e55574"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="22" y="410" width="270" height="20" uuid="66454e2c-c4ae-42b4-aa8f-fb46656a72dc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Objetivos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="430" width="270" height="20" uuid="7f99feed-0815-47b6-93c5-540a20ee9c1b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Objetivo General:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="22" y="450" width="510" height="80" uuid="b54f66b8-a5ad-45c2-aa69-28790d2fc280"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{objetivo_g}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="530" width="270" height="20" uuid="3c4e3864-d80a-459e-944b-85a18a3dac6c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Objetivos Especificos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="22" y="550" width="510" height="69" uuid="604bda95-c5dd-427f-a46b-a2e3973ef0fd"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{objetivo_s}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="10" y="0" width="289" height="51" uuid="062de383-bf5f-4298-bdc9-4f48b6f7bc74"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="279" y="0" width="261" height="51" uuid="6cf0aa82-153f-4eb6-8036-fcceec40352d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="10" y="50" width="530" height="50" uuid="241d30da-d277-4ddd-a8cb-f3184d00ac3d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="0" width="269" height="20" uuid="a23898ba-4865-4a34-aabd-fab8ffb06c03"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   Propuesto por:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="0" width="250" height="20" uuid="a6d5b96a-d387-4cdd-8f2c-e03ac00166c2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Carrera:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="51" width="310" height="20" uuid="3bbef853-6a52-4092-8e75-2d7fdbd5870b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   Fecha:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="19" y="20" width="260" height="30" uuid="d23b8993-c159-4b60-b541-e2d108306428"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="20" width="250" height="30" uuid="24387d05-7c71-47cf-9779-a95b7cea5276"/>
+				<textElement verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{career}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="22" y="74" width="259" height="25" uuid="728d2119-caf0-4b53-99cd-0d334134f9a2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="661">
+			<rectangle>
+				<reportElement x="10" y="10" width="530" height="123" uuid="5d7bcf6a-bea8-4523-9358-28b1b219ac19"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="21" y="10" width="270" height="20" uuid="137d3861-4893-4600-8993-58a322c4729e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Justificación del Proyecto:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="26" y="30" width="505" height="100" uuid="894e86f9-5347-4dd0-a430-139a4cf5868c"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{justificacion}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="10" y="133" width="530" height="123" uuid="00b8e0be-691f-460e-bf55-6bf3b283230c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="21" y="133" width="270" height="20" uuid="11415329-712a-444b-b6e4-8573c63829d0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alcance:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="26" y="160" width="505" height="90" uuid="dd26fa64-3d87-460a-ba4b-8e5a18bc69b0"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alcance}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="10" y="256" width="530" height="404" uuid="993f5578-a60b-4211-a37d-e3b74de3157c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="20" y="260" width="232" height="20" uuid="6a1cc53a-e2fd-49f4-8bce-761cc0885386"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Antecedentes de la Investigación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="280" width="232" height="20" uuid="faca51dd-04e7-46b4-b6d5-9e08d72e25d3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Marco Teórico:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="520" width="232" height="20" uuid="2ff46141-25b6-4740-919c-308e7b34ac3a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Marco Metodológico:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="25" y="300" width="505" height="210" uuid="1c86adde-ffd9-4b31-b313-bf03d0217c28"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{m_teorico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="25" y="540" width="505" height="120" uuid="9dbd5a7c-d119-48d5-9e3e-58317530d0e3"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{m_metodologico}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="442">
+			<rectangle>
+				<reportElement x="10" y="0" width="530" height="150" uuid="6fc30d9c-6747-44ab-99da-45b0461a15d2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="-1" width="274" height="20" uuid="24ef5850-ae61-4506-a361-bde6b1cbe78c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Metodología de desarrollo de software:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="25" y="19" width="502" height="121" uuid="a91f37c3-ab9d-48ae-bd43-a23a3a800ced"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{metodologia}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="10" y="152" width="530" height="128" uuid="0a5994ff-101e-4a59-a458-edccd121f7f3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="10" y="280" width="530" height="160" uuid="1e8ef292-4daa-45f3-8c91-f69ff2841e93"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="24" y="280" width="274" height="20" uuid="4c618ece-f2bf-4a0f-bace-85ce7fae6a59"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Presupuesto  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="157" width="274" height="28" uuid="3e24f515-613e-48c1-b0d1-c4ddacc891d3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bibliografía (Normas APA 6ta Edición):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="26" y="177" width="501" height="93" uuid="5c6ff4b8-7450-4981-b415-48a3d65b0da3"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bibliografia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="25" y="300" width="501" height="130" uuid="2c5fb28c-f4e3-4c9e-a66f-0c06557c4ae6"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{presupuesto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

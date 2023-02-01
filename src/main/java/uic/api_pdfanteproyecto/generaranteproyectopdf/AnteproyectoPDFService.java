@@ -71,7 +71,7 @@ public class AnteproyectoPDFService {
         try {
             reportJasperPrint = JasperFillManager.fillReport(
                     JasperCompileManager.compileReport(
-                            ResourceUtils.getFile("classpath:jrxml/solicitud.jrxml")
+                            ResourceUtils.getFile("classpath:jrxml/pdfanteproyecto.jrxml")
                                     .getAbsolutePath()) // path of the jasper report
                     , reportParameters // dynamic parameters
                     , new JREmptyDataSource());
